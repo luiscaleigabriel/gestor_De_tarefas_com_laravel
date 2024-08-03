@@ -11,6 +11,7 @@ Route::get('/', [SiteController::class, 'index'])->name('site.index');
 
 Route::controller(LoginController::class)->group(function() {
     Route::get('/login', 'index')->name('login.index');
+    Route::post('/login', 'logar')->name('login.logar');
 });
 
 Route::group([
