@@ -10,6 +10,7 @@
             <p class="lead text-sm-center text-md-start">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut esse laudantium sapiente libero perferendis numquam quaerat velit, excepturi a mollitia dolorum quidem ullam necessitatibus minus eveniet eligendi totam delectus exercitationem.
             </p>
+            <a class="btn btn-outline-success" href="/">Começar</a>
         </div>
     </div>
 @endsection
