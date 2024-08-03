@@ -11,6 +11,15 @@
                 <div class="col-12 text-center">
                     <h3>Welcome back!</h3>
                 </div>
+                @if ($errors->any())
+                <div class="col-12">
+                    <ul class="list-group">
+                        @foreach ($errors as $error)
+                            <li class="list-group-item list-group-item-danger">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <div class="col-12 col-sm-10 col-lg-8">
                     <input type="email" class="form-control rounded-pill" name="email" value="" placeholder="Email">
                 </div>

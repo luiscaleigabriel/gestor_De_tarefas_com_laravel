@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserCreateUpdateRequest;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -12,8 +12,8 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function logar(UserCreateUpdateRequest $request)
+    public function logar(LoginRequest $request)
     {
-        dd($request->a);
+        dd($request->all());
     }
 }
