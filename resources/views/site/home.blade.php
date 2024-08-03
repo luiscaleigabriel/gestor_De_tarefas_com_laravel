@@ -1,6 +1,7 @@
 @extends('site.master')
 @include('site.partials.navbar')
 @section('content')
+<div class="container pt-4">
     <div style="height: 600px" class="row align-items-center justify-content-center pt-4">
         <div class="col-md-6">
             <img class="img-fluid" src="{{ asset('assets/images/undraw_video_games_x1tr.png') }}" alt="Image">
@@ -13,5 +14,6 @@
             <a class="btn btn-outline-success" href="/">Começar</a>
         </div>
     </div>
+</div>
 @endsection
 @include('site.partials.footer')

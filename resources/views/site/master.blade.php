@@ -10,9 +10,7 @@
 </head>
 <body>
 
-    <div style="padding-top: 50px" class="container">
-        @yield('content')
-    </div>
+    @yield('content')
 
     <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
