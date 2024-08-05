@@ -19,7 +19,7 @@
             @endguest
 
             @auth
-                <span>Olá! {{ Auth::user()->name }} | <a href="{{ route('login.logout') }}">Sair</a></span>
+                <span> <span class="badge bg-primary">Olá! {{ Auth::user()->name }}</span>  | <span class="badge bg-danger"><a class="text-white" href="{{ route('login.logout') }}">Sair</a></span> </span>
             @endauth
 
           </div>

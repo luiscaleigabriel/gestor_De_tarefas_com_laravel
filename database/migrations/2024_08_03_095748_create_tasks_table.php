@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->time('bigin');
             $table->time('done');
-            $table->set('status', [0, 1, 2]);
+            $table->set('status', [0, 1, 2])->default(0);
             $table->unsignedBigInteger('id_anexo');
             $table->foreign('id_anexo')->references('id')->on('anexos')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

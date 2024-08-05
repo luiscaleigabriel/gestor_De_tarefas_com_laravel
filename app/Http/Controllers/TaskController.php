@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+
+    public function __construct(
+        protected Task $model
+    )
+    {}
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $tasks = $this->model->all();
+        return view('site.tasks.index', compact('tasks'));
     }
 
     /**
