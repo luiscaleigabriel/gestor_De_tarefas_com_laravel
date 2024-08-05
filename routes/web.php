@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\site\{
     SiteController,
     UserController
+};
+use App\Http\Controllers\{
+    LoginController,
+    TaskController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +22,5 @@ Route::group([
     'prefix' => 'user',
     'as' => 'user.'
 ], function () {
-    Route::get('tasks', [Tasks,'index'])->name('tasks')->middleware('auth');
+    Route::get('tasks', [TaskController::class ,'index'])->name('tasks')->middleware('auth');
 });
