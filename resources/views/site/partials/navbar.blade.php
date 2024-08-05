@@ -11,10 +11,17 @@
                 <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/tasks">Gerir Tarefas</a>
+                <a class="nav-link" href="{{ route('user.tasks') }}">Gerir Tarefas</a>
               </li>
             </ul>
+            @guest
             <a href="/login" class="btn btn-primary">Login</a>
+            @endguest
+
+            @auth
+                <span>Olá! {{ Auth::user()->name }} | <a href="{{ route('login.logout') }}">Sair</a></span>
+            @endauth
+
           </div>
         </div>
     </nav>

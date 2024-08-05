@@ -8,14 +8,14 @@
         <div class="col-12 col-lg-6">
             <form action="{{ route('login.logar'); }}" method="POST" class="row g-3 p-2 pt-4 align-items-center justify-content-center" >
                 @csrf
-                <div class="col-12 text-center">
+                <div class="col-8 text-center">
                     <h3>Welcome back!</h3>
                 </div>
                 @if ($errors->any())
-                <div class="col-12">
-                    <ul class="list-group">
+                <div class="col-12 col-sm-10 col-lg-8">
+                    <ul class="alert alert-danger p-4">
                         @foreach ($errors->all() as $error)
-                            <li class="list-group-item list-group-item-danger">{{ $error }}</li>
+                            <li class="list-group-item-danger">{{ $error }}</li>
                         @endforeach
                     </ul>
                 </div>
