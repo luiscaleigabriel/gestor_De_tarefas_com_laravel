@@ -23,4 +23,5 @@ Route::group([
     'as' => 'user.'
 ], function () {
     Route::get('tasks', [TaskController::class ,'index'])->name('tasks')->middleware('auth');
+    Route::get('tasks/add', [TaskController::class ,'create'])->name('create.task')->middleware('auth');
 });
